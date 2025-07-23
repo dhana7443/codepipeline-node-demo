@@ -1,0 +1,16 @@
+{
+  "name": "codepipeline-node-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "build":"echo Build step executed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "mocha": "^11.7.1"
+  }
+}
