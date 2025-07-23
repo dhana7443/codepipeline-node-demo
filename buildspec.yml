@@ -10,8 +10,8 @@ phases:
     commands:
       - echo Running tests
       - npm test
-      - scho Build complete!
+      - echo Build complete!
 
-  artifacts:
-    files:
-      - '**/*'
+artifacts:
+  files:
+    - '**/*'
