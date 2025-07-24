@@ -3,15 +3,19 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo installing dependencies...
-      - npm install
-  
+      - echo Installing dependencies...
+      - sudo apt-get update -y
+      - sudo apt-get install -y cowsay
+  pre_build:
+    commands:
+      - echo Pre-build phase...
   build:
     commands:
-      - echo Running tests
-      - npm test
-      - echo Build complete!
-
+      - echo Build phase...
+      - cowsay "Build in progress"
+  post_build:
+    commands:
+      - echo Post-build phase complete.
 artifacts:
   files:
     - '**/*'
