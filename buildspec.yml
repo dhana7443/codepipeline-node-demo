@@ -17,5 +17,5 @@ phases:
       - echo Post-build phase complete.
 artifacts:
   files:
-    - '**/*'
+    - output.txt
   discard-paths: yes
