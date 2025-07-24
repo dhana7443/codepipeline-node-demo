@@ -4,15 +4,15 @@ phases:
   install:
     commands:
       - echo Installing dependencies...
-      - sudo apt-get update -y
-      - sudo apt-get install -y cowsay
+      - echo Skipping apt-get since it is not supported in this environment.
+      - yum update -y || true
   pre_build:
     commands:
       - echo Pre-build phase...
   build:
     commands:
       - echo Build phase...
-      - cowsay "Build in progress"
+      - echo "Build in progress"
   post_build:
     commands:
       - echo Post-build phase complete.
