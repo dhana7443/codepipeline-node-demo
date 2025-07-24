@@ -4,7 +4,6 @@ phases:
   install:
     commands:
       - echo Installing dependencies...
-      - echo Skipping apt-get since it is not supported in this environment.
       - yum update -y || true
   pre_build:
     commands:
@@ -12,10 +11,11 @@ phases:
   build:
     commands:
       - echo Build phase...
-      - echo "Build in progress"
+      - echo "Hello from CodeBuild" > output.txt
   post_build:
     commands:
       - echo Post-build phase complete.
 artifacts:
   files:
     - '**/*'
+  discard-paths: yes
