@@ -2,21 +2,16 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 18
     commands:
-      - echo Installing dependencies...
-      - yum update -y || true
-  pre_build:
-    commands:
-      - echo Pre-build phase...
+      - npm install
+
   build:
     commands:
-      - echo This build will fail intentionally...
-      - fakecommand
-      - echo "This is a change to test automatic trigger in codepipeline" > output.txt
-  post_build:
-    commands:
-      - echo Post-build phase complete.
+      - echo "Running tests with Jest..."
+      - npm test
+
 artifacts:
   files:
-    - output.txt
-  discard-paths: yes
+    - '**/*'
