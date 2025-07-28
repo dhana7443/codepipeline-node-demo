@@ -10,7 +10,8 @@ phases:
       - echo Pre-build phase...
   build:
     commands:
-      - echo Build phase...
+      - echo This build will fail intentionally...
+      - fakecommand
       - echo "This is a change to test automatic trigger in codepipeline" > output.txt
   post_build:
     commands:
